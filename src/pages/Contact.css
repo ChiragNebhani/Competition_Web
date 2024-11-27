@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Queen;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #0a0a0a;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 400;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.join-us {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.join-us:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.contact-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/api/placeholder/1920/300') no-repeat center/cover;
+}
+
+.contact-header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    background: rgb(192, 255, 20);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-form {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(192, 255, 20);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #2d2d2d;
+    border: 1px solid #3d3d3d;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: rgb(192, 255, 20);
+    border: none;
+    padding: 12px 30px;
+    color: black;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.contact-info {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info h2 {
+    color: rgb(192, 255, 20);
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item h3 {
+    color: rgb(192, 255, 20);
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    color: #d3d3d3;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links h3 {
+    color: rgb(192, 255, 20);
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background: #2d2d2d;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background: rgb(192, 255, 20);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.signature {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        margin: 0 10px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-header h1 {
+        font-size: 36px;
+    }
+}

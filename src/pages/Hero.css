@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@font-face {
+    font-family: nero;
+    src: url('./fonts/neuropolitical.otf');
+}
+
+@font-face {
+    font-family: sugar;
+    src: url('./fonts/sugarpunch.otf');
+}
+
+
+
+
+
+.hero__title {
+    position: relative;
+    text-align: center;
+    max-width: max-content;
+    z-index: 2;
+    mix-blend-mode: difference;
+    color: white;
+    font-size: 3.5rem;
+}
+
+.hero__images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+}
+@media (max-width:580px) {
+    .hero__images{
+        justify-content: center;
+    }
+}
+
+.hero__images img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 14px;
+}
