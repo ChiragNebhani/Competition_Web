@@ -1,109 +1,63 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const ParentFeedbackSection = () => {
-  const [feedbacks, setFeedbacks] = useState([
+  const feedbacks = [
     {
       name: 'Emily Johnson',
       rating: 5,
-      comment: 'An incredible learning experience for my child. The personalized attention is remarkable!',
+      comment: 'An incredible learning experience for my child. The personalized attention is remarkable! The instructors truly understand how to engage and inspire young learners.',
       date: '2 weeks ago',
     },
     {
       name: 'Michael Rodriguez',
       rating: 4,
-      comment: 'Great program, my son has shown significant improvement in his skills.',
+      comment: 'Great program that has shown significant improvement in my son\'s skills. The curriculum is well-structured and the teachers are passionate about education.',
       date: '1 month ago',
     },
-  ]);
-
-  const [newFeedback, setNewFeedback] = useState({
-    name: '',
-    rating: 0,
-    comment: '',
-  });
-
-  const handleRatingChange = (rating) => {
-    setNewFeedback((prev) => ({ ...prev, rating }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (newFeedback.name && newFeedback.comment && newFeedback.rating > 0) {
-      setFeedbacks([
-        {
-          ...newFeedback,
-          date: 'Just now',
-        },
-        ...feedbacks,
-      ]);
-      setNewFeedback({ name: '', rating: 0, comment: '' });
+    {
+      name: 'Sarah Thompson',
+      rating: 5,
+      comment: 'Absolutely transformative! My daughter\'s confidence has skyrocketed since joining the program. The approach to learning is both fun and educational.',
+      date: '3 weeks ago',
+    },
+    {
+      name: 'David Kim',
+      rating: 5,
+      comment: 'I\'m impressed by the comprehensive learning approach. The instructors go above and beyond to ensure each student receives individualized attention.',
+      date: '2 months ago',
+    },
+    {
+      name: 'Rachel Lee',
+      rating: 4,
+      comment: 'A fantastic educational experience. The interactive classes and innovative teaching methods have made learning exciting for my child.',
+      date: '1 month ago',
+    },
+    {
+      name: 'Jason Wong',
+      rating: 5,
+      comment: 'The best decision we made for our child\'s education. The program not only teaches academic skills but also builds character and confidence.',
+      date: '6 weeks ago',
     }
-  };
+  ];
 
   return (
-    <div className="bg-black text-white p-8 max-w-2xl mx-auto rounded-lg shadow-2xl">
+    <div className="bg-black text-white py-12 px-4 sm:px-8 lg:px-24 max-w-full mx-auto rounded-lg shadow-2xl">
       <h2
-        className="text-3xl font-bold mb-6 text-center"
+        className="text-3xl md:text-4xl font-bold mb-10 text-center"
         style={{ color: 'rgb(192, 255, 20)' }}
       >
         Parent Feedback
       </h2>
 
-      {/* Feedback Submission Form */}
-      <form onSubmit={handleSubmit} className="mb-8 bg-gray-900 p-6 rounded-lg">
-        <input
-          type="text"
-          placeholder="Your Name"
-          value={newFeedback.name}
-          onChange={(e) =>
-            setNewFeedback((prev) => ({ ...prev, name: e.target.value }))
-          }
-          className="w-full p-3 mb-4 bg-gray-800 text-white rounded"
-        />
-
-        <div className="flex justify-center mb-4">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <button
-              key={star}
-              type="button"
-              onClick={() => handleRatingChange(star)}
-              className={`mx-1 text-2xl ${
-                newFeedback.rating >= star ? 'text-yellow-400' : 'text-gray-500'
-              }`}
-            >
-              ★
-            </button>
-          ))}
-        </div>
-
-        <textarea
-          placeholder="Your Feedback"
-          value={newFeedback.comment}
-          onChange={(e) =>
-            setNewFeedback((prev) => ({ ...prev, comment: e.target.value }))
-          }
-          className="w-full p-3 mb-4 bg-gray-800 text-white rounded h-24"
-        />
-
-        <button
-          type="submit"
-          className="w-full p-3 rounded"
-          style={{
-            backgroundColor: 'rgb(192, 255, 20)',
-            color: 'black',
-            fontWeight: 'bold',
-          }}
-        >
-          Submit Feedback
-        </button>
-      </form>
-
-      {/* Existing Feedbacks */}
-      <div className="space-y-4">
+      {/* Existing Feedbacks Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {feedbacks.map((feedback, index) => (
-          <div key={index} className="bg-gray-900 p-5 rounded-lg">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-xl">{feedback.name}</h3>
+          <div 
+            key={index} 
+            className="bg-gray-900 p-6 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="font-bold text-xl text-white">{feedback.name}</h3>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <span
@@ -119,14 +73,16 @@ const ParentFeedbackSection = () => {
                 ))}
               </div>
             </div>
-            <p className="text-gray-300 mb-2">{feedback.comment}</p>
+            <p className="text-gray-300 mb-4 text-base leading-relaxed">
+              {feedback.comment}
+            </p>
             <div className="flex justify-between items-center text-sm text-gray-500">
               <span>{feedback.date}</span>
               <div className="flex items-center space-x-2">
-                <button className="hover:bg-gray-800 p-1 rounded text-xl">
+                <button className="hover:bg-gray-800 p-1 rounded text-xl transition-colors">
                   👍
                 </button>
-                <button className="hover:bg-gray-800 p-1 rounded text-xl">
+                <button className="hover:bg-gray-800 p-1 rounded text-xl transition-colors">
                   👎
                 </button>
               </div>
