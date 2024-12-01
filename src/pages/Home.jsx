@@ -3,6 +3,8 @@ import { FeaturesSectionDemo } from "./Featured";
 import { CanvasRevealEffectDemo } from "./Team-page";
 import ParentFeedbackSection from "./Feedback";
 import PostersSection from "./PosterSection";
+import CompetitionDetails from "./CompetionsDetails";
+import SchoolPartners from "./Partners.jsx";
 
 function Home() {
     return (
@@ -15,8 +17,10 @@ function Home() {
                 />
             </section>
             <FeaturesSectionDemo />
-            <CanvasRevealEffectDemo />
+            <CompetitionDetails/>
+            <SchoolPartners/>
             <PostersSection />
+            <CanvasRevealEffectDemo />
             <ParentFeedbackSection/>
         </>
     );

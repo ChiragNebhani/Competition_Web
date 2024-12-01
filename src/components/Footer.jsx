@@ -96,7 +96,7 @@ export const Footer = () => {
 
                     {/* Footer Text */}
                     <div className="text-sm text-center text-[#667085]">
-                        &copy; {new Date().getFullYear()} ChiragNebhani|DakshCodes|BhaveshKhandelwal. All rights reserved.
+                        &copy; {new Date().getFullYear()} LERA team. All rights reserved.
                     </div>
                 </div>
             </div>

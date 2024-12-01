@@ -24,7 +24,7 @@ export function CanvasRevealEffectDemo() {
       }]} />}>
         <CanvasRevealEffect animationSpeed={5.1} containerClassName="bg-emerald-900" />
       </Card>
-      <Card title="Managment" icon={<AnimatedTooltip items={[{
+      <Card title="Management" icon={<AnimatedTooltip items={[{
         id: 1,
         name: "Daksh Singh",
         designation: "88240 60163",
@@ -43,7 +43,7 @@ export function CanvasRevealEffectDemo() {
         <div
           className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
       </Card>
-      <Card title="Managment" icon={<AnimatedTooltip items={[{
+      <Card title="Management" icon={<AnimatedTooltip items={[{
         id: 1,
         name: "Bhavesh Khandelwal",
         designation: "94620 63106",
