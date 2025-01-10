@@ -6,6 +6,7 @@ import Gallery from './pages/Gallery';
 import About from './pages/About'; 
 import Contact from './pages/Contact'; 
 import Academy from './pages/Academy';
+import Codemos from './pages/Codemos';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
         <Route path="/about" element={<About />} /> 
         <Route path="/contact" element={<Contact />} />
         <Route path="/academy" element={<Academy />} />
+        <Route path="/codemos" element={<Codemos/>} />
+
+        
         {/* <Route path="/features" element={<FeaturesSectionDemo />} />
         <Route path="/team" element={<CanvasRevealEffectDemo />} /> */}
       </Routes>

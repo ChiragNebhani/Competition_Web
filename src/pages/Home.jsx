@@ -17,7 +17,7 @@ function Home() {
                 />
             </section>
             <FeaturesSectionDemo />
-            <CompetitionDetails/>
+            {/* <CompetitionDetails/> */}
             <SchoolPartners/>
             <PostersSection />
             <CanvasRevealEffectDemo />

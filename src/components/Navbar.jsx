@@ -17,7 +17,7 @@ function Navbar() {
             {/* Logo */}
             <a href="/" onClick={closeMenu}>
                 <div className="logo">
-                    ROBOFEST
+                    LERA
                 </div>
             </a>
 
@@ -38,6 +38,7 @@ function Navbar() {
                 <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
                 <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
                 <Link to="/academy" onClick={closeMenu}>Academy</Link>
+                <Link to="/codemos" onClick={closeMenu}>Codemos</Link>
 
                 {/* Join Us Button for Mobile */}
 

@@ -1,109 +1,51 @@
 import React from 'react';
-import { IconSchool, IconMapPin, IconUsers } from "@tabler/icons-react";
+import { motion } from 'framer-motion';
 
-// Ensure the file is named Partners.jsx or Partners.tsx
 const Partners = () => {
-  const partners = [
-    {
-      name: "Tech Innovators High School",
-      location: "New York, NY",
-      students: 1200,
-      logo: "https://via.placeholder.com/250x120?text=Tech+Innovators+High",
-      description: "Leading STEM education and robotic research programs"
-    },
-    {
-      name: "Robotics Academy",
-      location: "San Francisco, CA", 
-      students: 950,
-      logo: "https://via.placeholder.com/250x120?text=Robotics+Academy",
-      description: "Pioneering advanced robotics and AI curriculum"
-    },
-    {
-      name: "Innovation Charter School",
-      location: "Boston, MA",
-      students: 800,
-      logo: "https://via.placeholder.com/250x120?text=Innovation+Charter",
-      description: "Specialized in hands-on technology and engineering education"
-    },
-    {
-      name: "Future Scientists Preparatory",
-      location: "Chicago, IL",
-      students: 1100,
-      logo: "https://via.placeholder.com/250x120?text=Future+Scientists+Prep",
-      description: "Comprehensive STEM-focused educational institution"
-    },
-    {
-      name: "Global Tech High School",
-      location: "Seattle, WA",
-      students: 1300,
-      logo: "https://via.placeholder.com/250x120?text=Global+Tech+High",
-      description: "International approach to technology and innovation education"
-    },
-    {
-      name: "Quantum Learning Center",
-      location: "Austin, TX",
-      students: 750,
-      logo: "https://via.placeholder.com/250x120?text=Quantum+Learning",
-      description: "Cutting-edge research and educational technologies"
-    }
+  const schools = [
+    "Green Valley Sr Sec School",
+    "Arihant International School",
+    "Vedant International School",
+    "IBVM School",
+    "Navjeevan School",
+    "Xavier School",
+    "SVGMS Gangwar",
+    "SVGMS Banega",
+    "SVGMS Badi Dadri",
+    "SVGMS Banswara",
+    "SVGMS Anoop Vadh",
+    "SVGMS Dungarpur",
+    "SVGMS Titri",
+    "SVGMS Jahazpur",
+    "Calliber Academy Sr Sec School Chittorgarh",
+    "DPS Ahmedabad",
+    "Miranda Sr Sec School Udaipur",
+    "AIM Sr Sec School Mandavi, Gujarat",
+    "SVGMS Churu",
+    "SVGMS Devli",
+    "Swift Public School Bhilwara",
+    "APS Nasirabad"
   ];
 
   return (
-    <div className="bg-black text-white py-16 px-4 sm:px-8 lg:px-24 max-w-[92rem] mx-auto rounded-lg shadow-2xl">
-      <h2 
-        className="text-4xl font-bold mb-12 text-center"
-        style={{ color: 'rgb(192, 255, 20)' }}
-      >
+    <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16 px-4 sm:px-8 lg:px-24 max-w-[92rem] mx-auto rounded-lg shadow-2xl">
+      <h2 className="text-5xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">
         Our School Partners
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {partners.map((partner, index) => (
+        {schools.map((school, index) => (
           <div 
             key={index} 
-            className="bg-gray-900 p-6 rounded-xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            className="group hover:scale-105 transition-transform duration-300 ease-in-out"
           >
-            <div className="mb-6 flex justify-center">
-              <img 
-                src={partner.logo} 
-                alt={partner.name} 
-                className="max-h-24 object-contain rounded-lg"
-              />
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-cyan-300 mb-4">{partner.name}</h3>
-              
-              <div className="flex justify-center space-x-4 mb-4 text-neutral-300">
-                <div className="flex items-center">
-                  <IconMapPin size={20} className="mr-2 text-green-400" />
-                  <span>{partner.location}</span>
-                </div>
-                <div className="flex items-center">
-                  <IconUsers size={20} className="mr-2 text-yellow-400" />
-                  <span>{partner.students} Students</span>
-                </div>
-              </div>
-
-              <p className="text-neutral-400 italic">{partner.description}</p>
+            <div className="bg-slate-800/50 p-6 rounded-lg hover:bg-slate-700/50 transition-colors duration-300 border border-slate-700 hover:border-slate-600 h-full flex items-center justify-center">
+              <h3 className="text-center text-lg font-medium bg-gradient-to-r from-cyan-200 to-cyan-100 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-cyan-200 transition-all duration-300">
+                {school}
+              </h3>
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="text-center mt-16">
-        <h3 
-          className="text-3xl font-bold mb-8"
-          style={{ color: 'rgb(192, 255, 20)' }}
-        >
-          Interested in Partnering?
-        </h3>
-        <button 
-          className="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-        >
-          Contact Our Partnership Team
-        </button>
-        <p className="text-neutral-400 mt-4">Expand technological education together</p>
       </div>
     </div>
   );
