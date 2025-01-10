@@ -27,7 +27,7 @@ const Gallery = () => {
         <div className="gallery-grid">
           {['1', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'].map((num, index) => (
             <div className="gallery-item" style={{ animationDelay: `${0.1 * index}s` }} key={num} onClick={() => handleImageClick(`./Assets/${num}.jpeg`)}>
-              <img src={`./src/assets/images/${num}.jpeg`} alt={`ROBOFEST Event ${num}`} />
+              <img src={`./assets/images/${num}.jpeg`} alt={`ROBOFEST Event ${num}`} />
               <div className="gallery-overlay">
                 <div className="gallery-text">
                   <h3>ROBOFEST 2024</h3>

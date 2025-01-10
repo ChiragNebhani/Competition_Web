@@ -15,7 +15,7 @@ const PostersSection = () => {
         {/* Poster 1 */}
         <div className="bg-gray-900 p-4 sm:p-6 rounded-lg flex justify-center items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
           <img
-            src="/src/assets/cards/1.svg"
+            src="assets/cards/1.svg"
             alt="Course 1"
             className="max-w-full h-auto rounded-lg object-contain"
           />
@@ -24,7 +24,7 @@ const PostersSection = () => {
         {/* Poster 2 */}
         <div className="bg-gray-900 p-4 sm:p-6 rounded-lg flex justify-center items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
           <img
-            src="/src/assets/cards/2.svg"
+            src="assets/cards/2.svg"
             alt="Course 2"
             className="max-w-full h-auto rounded-lg object-contain"
           />
@@ -33,7 +33,7 @@ const PostersSection = () => {
         {/* Poster 3 */}
         <div className="bg-gray-900 p-4 sm:p-6 rounded-lg flex justify-center items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
           <img
-            src="/src/assets/cards/3.svg"
+            src="assets/cards/3.svg"
             alt="Course 3"
             className="max-w-full h-auto rounded-lg object-contain"
           />
@@ -42,7 +42,7 @@ const PostersSection = () => {
         {/* Poster 4 */}
         <div className="bg-gray-900 p-4 sm:p-6 rounded-lg flex justify-center items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
           <img
-            src="/src/assets/cards/4.svg"
+            src="assets/cards/4.svg"
             alt="Course 4"
             className="max-w-full h-auto rounded-lg object-contain"
           />

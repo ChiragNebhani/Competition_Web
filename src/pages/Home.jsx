@@ -11,7 +11,7 @@ function Home() {
         <>
             <section className="carousel">
                 <img
-                    src="/src/assets/homepage.svg"
+                    src="assets/homepage.svg"
                     alt="Homepage Background"
                     className="carousel-image"
                 />

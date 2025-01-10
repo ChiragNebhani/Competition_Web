@@ -7,7 +7,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="hero">
         <img
-          src="/src/assets/aboutpage1.svg"
+          src="assets/aboutpage1.svg"
           alt="Aboutpage Background"
           className="aboutpage-image"
         />
@@ -22,7 +22,7 @@ const About = () => {
             <p>Our mission is to inspire the next generation of engineers and scientists by providing them with hands-on experience in robotics and automation. Through our competitions and workshops, we aim to bridge the gap between theoretical knowledge and practical application.</p>
           </div>
           <div className="about-image">
-            <img src="./src/assets/Robofest2.svg" alt="ROBOFEST Event" />
+            <img src="./assets/Robofest2.svg" alt="ROBOFEST Event" />
           </div>
         </div>
       </section>
